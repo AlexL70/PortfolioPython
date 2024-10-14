@@ -18,3 +18,8 @@ My primary speciality at the moment is web-app development with C# and .Net. I h
 I developed software for different areas of activity, including banking, billing & CRM, contract management, content management, online trading and software development tools.
     """
     st.info(content)
+
+content2 ="""Below you can find some of the apps I have built using different programming languages and frameworks.
+
+Please feel free to contact me."""
+st.write(content2)
