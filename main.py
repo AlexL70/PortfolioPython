@@ -27,11 +27,17 @@ st.write(content2)
 
 df = pn.read_csv("data.csv",sep=';')
 column_len = int(len(df) / 2)
-col3, col4 = st.columns(2)
+col3, space, col4 = st.columns([8,1,8])
 for index, row in df[:column_len].iterrows():
     with col3:
         st.header(row['title'])
+        st.write(row['description'])
+        st.image(f"./images/{row['image']}")
+        st.write(f"[Open source code]({row['url']})")
 
 for index, row in df[column_len:].iterrows():
     with col4:
         st.header(row['title'])
+        st.write(row['description'])
+        st.image(f"./images/{row['image']}")
+        st.write(f"[Open source code]({row['url']})")
